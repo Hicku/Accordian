@@ -18,4 +18,9 @@
   border-width: medium;
   width: 100%;
   margin-bottom: 15px;
+  cursor: pointer;
+}
+
+.btn {
+  margin: 10px;
 }

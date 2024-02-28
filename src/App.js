@@ -1,3 +1,4 @@
+import { useState } from "react";
 import "./App.css";
 import Tabs from "./components/Tabs";
 
@@ -25,9 +26,27 @@ const dummyData = [
 ];
 
 function App() {
+  const [curOpen, setCurOpen] = useState(null);
+  const [multiClick, setMultiClick] = useState(false);
+  const [multiCurOpen, setMultiCurOpen] = useState([]);
+
+  const toggleMultiClick = () => {
+    setMultiClick(!multiClick);
+    setCurOpen(null);
+    setMultiCurOpen([]);
+  };
+
   return (
     <div className="App">
-      <Tabs dummyData={dummyData} />
+      <Tabs
+        dummyData={dummyData}
+        onToggleMultiClick={toggleMultiClick}
+        multiClick={multiClick}
+        curOpen={curOpen}
+        setCurOpen={setCurOpen}
+        multiCurOpen={multiCurOpen}
+        setMultiCurOpen={setMultiCurOpen}
+      />
     </div>
   );
 }
