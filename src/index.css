@@ -1,0 +1,23 @@
+.App {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  background-color: blueviolet;
+}
+
+.tabs {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 50%;
+  background-color: aqua;
+}
+
+.tab {
+  border-style: solid;
+  border-width: medium;
+  width: 100%;
+  margin-bottom: 15px;
+}
